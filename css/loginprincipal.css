@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #94c9ff, #d7f3f7);
+}
+
+.contenedorPrincipal {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.columnaIzquierda {
+    width: 50%;
+    background-color:#8bcfe6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.menuNavegacion {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+    margin-bottom: 20px; 
+}
+
+.enlaceMenu {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.enlaceMenu:hover {
+    color: #0056b3;
+}
+
+.edificioImagen {
+    width: 350px;
+    height: auto;
+}
+
+.informacionContacto p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.columnaDerecha {
+    width: 50%;
+    background-color: #dff2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bienvenida h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.imagenBienvenida {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-right: 40px; 
+}
+
+.imagenBienvenida img {
+    max-width: 100px; 
+    height: auto; 
+    border-radius: 50%; 
+}
+
+.formularioIngreso {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.formularioIngreso input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formularioIngreso button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formularioIngreso button:hover {
+    background-color: #0056b3;
+}
+
+.bienvenida p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.bienvenida a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bienvenida a:hover {
+    text-decoration: underline;
+}

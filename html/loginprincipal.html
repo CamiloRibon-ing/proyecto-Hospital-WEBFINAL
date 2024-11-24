@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Principal</title>
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="../css/loginprincipal.css">
 </head>
+
 <body>
-    
+    <div class="contenedorPrincipal">
+        <div class="columnaIzquierda">
+            <div class="menuNavegacion">
+                <a href="masopciones.html" class="enlaceMenu">Mas opciones</a>
+                <a href="inicio.html" class="enlaceMenu">Inicio</a>
+                <a href="ayuda.html" class="enlaceMenu">Ayuda</a>
+            </div>
+            <div class="imagenEdificio">
+                <img src="../recursos/hospital.png" alt="Edificio" class="edificioImagen">
+            </div>
+            <div class="informacionContacto">
+                <p>📞 Teléfono: +123-456-7890</p>
+                <p>✉️ Correo: hello@reallygreatsite.com</p>
+                <p>🌐 Sitio web: www.reallygreatsite.com</p>
+                <p>📍 Dirección: 123 Anywhere St., Any City</p>
+            </div>
+        </div>
+        <div class="columnaDerecha">
+            <div class="bienvenida">
+                <div class="imagenBienvenida">
+                    <img src="../recursos/logo_usuario.png" alt="Imagen de bienvenida">
+                </div>
+                <h1>BIENVENIDO</h1>
+                <form class="formularioIngreso" action="login.html" method="post">
+                    <input type="text" placeholder="Usuario" name="usuario" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" required>
+                    <button type="submit">INGRESAR</button>
+                </form>
+                <p>¿No está registrado? <a href="registro.html">Click aquí para registrarse</a></p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
