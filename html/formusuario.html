@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/formusuario.css">
     <title>Document</title>
 </head>
 <body>
     
-    <h1>MAS VALE VIVO QUE MUERTO</h1>
-    
+       
     <nav class="barralateral">
         <ul>
-            <li><a href="presentacion.html"></a></li>
+            <li>
+                <a href="menuprincipal.html">
+                <i class="fas fa-home"></i>
+                Menu principal</a>
+            </li>
         </ul>
     </nav>
 
@@ -23,20 +27,20 @@
 
             <form id="registro-form">
 
-                <label for="nombre"></label>
-                <input type="text" id="nombre" name="nombre" placeholder="ingrese su nombre completo"required>
+                <label for="nombre">Datos personales</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo"required>
 
                 <label for="apellido"></label>
-                <input type="text" id="apellido" name="apellido" placeholder="ingrese su apellido"required>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido"required>
 
-                <label for="identificacion"></label>
-                <input type="date" id="identificacion" name="identificacion" placeholder="ingrese su identificación"required>
+                <label for="identificacion">Ingrese su identificación</label>
+                <input type="number" id="identificacion" name="identificacion" placeholder="Ingrese su identificación" required>
 
-                <label for="fecha de registro" id="fecha"></label>
-                <input type="datetime" id="fecha" name="fecha" placeholder="ingrese la fecha de su registro"required>
+                <label for="fecha">Fecha de registro</label>
+                <input type="datetime" id="fecha" name="fecha" placeholder="Ingrese la fecha de su registro"required>
 
-                <label for="Ingrese su direcion" id="direccion"></label>
-                <input type="date" id="direccion" name="direccion" placeholder="ingrese su dirección"required>
+                <label for="direccion"></label>
+                <input type="number" id="direccion" name="direccion" placeholder="Ingrese su dirección"required>
 
                 <label for="correo"></label>
                 <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com"required>
@@ -44,14 +48,15 @@
                 <label for="perfil">Seleccione el estado de su perfil</label>
                 <select name="perfil" id="perfil" required>
                 <option value="Activo">Activo</option>
-                <option value="Inactivo"></option>
+                <option value="Inactivo">Inactivo</option>
                 </select>
 
-                <label for="user"></label>
+                <label for="user">Ingrese los siguientes campos</label>
                 <input type="text" id="user" name="user" placeholder="ingrese su usuario">
 
                 <label for="password"></label>
                 <input type="password" id="password" name="password" placeholder="ingrese su contraseña">
+                
                 <button type="submit">Registrar</button>
             </form>
             
