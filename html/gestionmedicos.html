@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Médicos</title>
+    <link rel="stylesheet" href="../css/gestionmedicos.css">
+  
+</head>
+<body>
+    <h2 style="text-align: center;">Gestión de Médicos</h2>
+    <form>
+        <label for="idMedico">Identificación de médico (autogenerado)</label>
+        <input type="text" id="idMedico" name="idMedico" disabled placeholder="ID generado automáticamente">
+
+        <label for="nombreMedico">Nombre completo del médico</label>
+        <input type="text" id="nombreMedico" name="nombreMedico" placeholder="Escribe el nombre completo" required>
+
+        <label for="licenciaMedico">Número de licencia profesional</label>
+        <input type="text" id="licenciaMedico" name="licenciaMedico" placeholder="Ejemplo: ABC123456" required>
+
+        <label for="especialidad">Especialidad</label>
+        <select id="especialidad" name="especialidad" required>
+            <option value="">Selecciona una especialidad</option>
+        </select>
+
+        <label for="telefono">Teléfono de contacto</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: 3001234567">
+
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
