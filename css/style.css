@@ -1,0 +1,8 @@
+.presentacion{
+width: 100%;
+height: 400px;
+background-image: url('/recursos/medical-5459653_1280.png');
+background-repeat: no-repeat;
+background-size: contain;
+border: 1px solid blue;
+}
