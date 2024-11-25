@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de citas y consultas</title>
+</head>
+<body>
+    <form action="formcitas">
+    <label for="idcita">Identificacion de la cita</label>
+    <input type="text" id="idcita" name="idcita" placeholder="Ingrese el id de la cita">
+
+    <label for="fechaConsulta">Ingrese la fecha de su consulta</label>
+    <input type="datetime-local" id="fechaConsulta" name="fechaConsulta" placeholder="Ingrese la fecha de su consulta">
+
+    <label for="Especialidades">Ingrese la especialidad de su consulta</label>
+    <select name="especialidad" id="especialidades">
+        <option value="Cardiología">Cardiología</option>
+        <option value="Pediatría">Pediatría</option> 
+        <option value="ginecologia">ginecologia</option>
+    </select>
+
+    <label for="medicos">Doctores disponibles</label>
+    <input type="text" id="medicos" name="medicos" placeholder="Ingrese el nombre del medico con el que se consultara">
+
+    <label for="estadocita">Ingrese el estado de su cita</label>
+    <select name="estadocita" id="estadocita">
+        <option value="completada">Completada</option>
+        <option value="programada">Programada</option>
+        <option value="cancelada">Cancelada</option>
+    </select>
+    <label for="motivoconsulta">Ingrese el motivo de su consulta</label>
+    <textarea name="motivoconsulta" id="motivoconsulta">Escriba aqui el motivo de su consulta</textarea>
+
+   
+
+
+</form>
+
+<button type="submit">Enviar</button>
+</body>
+<script src="/jv/gestioncitasconsultas.js"></script>
+</html>

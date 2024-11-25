@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="histouser">
+
+        <label for="histomedico">Identificacion del historial medico</label>
+        <input type="text" id="histomedico" name="histomedico" placeholder="ingrese el ID de su historial medico">
+
+        <label for="fechaConsulta">Ingrese la fecha de su consulta</label>
+        <input type="datetime-local" id="fechaConsulta" name="fechaConsulta" placeholder="ingrese la fecha en la que se hizo su consulta medica">
+
+        <label for="diagnostico">Aqui visualizara su diagnostico</label>
+        <input type="text" id="diagnostico" name="diagnostico" placeholder="">
+
+        <label for="tratamiento">Aqui visualizara su tratamiento indicado</label>
+        <input type="text" id="tratamiento" name="tratamiento" placeholder="">
+
+        <label for="notas">Aqui visualizara notas adicionales sobre su tratamiento</label>
+        <textarea name="notas" id="notas">...</textarea>
+    </form>
+
+    <button type="submit">Enviar</button>
+</body>
+</html>

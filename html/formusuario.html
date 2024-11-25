@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/formusuario.css">
+    <link rel="icon" href="/recursos/minilogo-cecar.png">
     <title>Document</title>
 </head>
 <body>
@@ -13,9 +14,15 @@
     <nav class="barralateral">
         <ul>
             <li>
-                <a href="menuprincipal.html">
+                <a href="/index.html">
                 <i class="fas fa-home"></i>
                 Menu principal</a>
+            </li>
+            <li>
+                <a href="loginprincipal.html">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Iniciar sesion
+                </a>
             </li>
         </ul>
     </nav>
@@ -37,7 +44,7 @@
                 <input type="number" id="identificacion" name="identificacion" placeholder="Ingrese su identificación" required>
 
                 <label for="fecha">Fecha de registro</label>
-                <input type="datetime" id="fecha" name="fecha" placeholder="Ingrese la fecha de su registro"required>
+                <input type="datetime-local" id="fecha" name="fecha" placeholder="Ingrese la fecha de su registro"required>
 
                 <label for="direccion"></label>
                 <input type="number" id="direccion" name="direccion" placeholder="Ingrese su dirección"required>
