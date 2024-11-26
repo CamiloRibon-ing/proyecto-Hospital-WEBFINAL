@@ -5,14 +5,30 @@ function inicializarSistema() {
 }
 
 
+function inicializarSistema() {
+    const formulario = document.getElementById("message-form");
+    formulario.addEventListener("submit", manejarEnvioMensaje);
+
+    cargarMensajes(); // Cargar mensajes existentes al iniciar
+    console.log("Sistema inicializado");
+}
+
 function manejarEnvioMensaje(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     const remitente = obtenerValorInput("sender");
     const destinatario = obtenerValorInput("receiver");
     const contenidoMensaje = obtenerValorInput("message");
 
     if (validarEntradas(remitente, destinatario, contenidoMensaje)) {
-        mostrarMensajeEnLog(remitente, destinatario, contenidoMensaje);
+        const nuevoMensaje = {
+            remitente,
+            destinatario,
+            mensaje: contenidoMensaje,
+            fechaHora: obtenerFechaHoraActual(),
+        };
+
+        guardarMensaje(nuevoMensaje); // Guardar mensaje en localStorage
+        mostrarMensajeEnLog(nuevoMensaje);
         limpiarFormulario();
         console.log("Mensaje enviado correctamente");
     } else {
@@ -21,31 +37,40 @@ function manejarEnvioMensaje(event) {
 }
 
 function obtenerValorInput(id) {
-    return document.getElementById(id).value.trim(); 
+    return document.getElementById(id).value.trim();
 }
-
 
 function validarEntradas(remitente, destinatario, mensaje) {
     return remitente !== "" && destinatario !== "" && mensaje !== "";
 }
 
-
-function mostrarMensajeEnLog(remitente, destinatario, mensaje) {
+function mostrarMensajeEnLog(mensaje) {
     const listaMensajes = document.getElementById("messages-list");
-    const nuevoMensaje = document.createElement("li");
-    const fechaHora = obtenerFechaHoraActual();
+    const nuevoElemento = document.createElement("li");
 
-    nuevoMensaje.textContent = `[${fechaHora}] ${remitente} a ${destinatario}: ${mensaje}`;
-    listaMensajes.appendChild(nuevoMensaje);
+    nuevoElemento.textContent = `[${mensaje.fechaHora}] ${mensaje.remitente} a ${mensaje.destinatario}: ${mensaje.mensaje}`;
+    listaMensajes.appendChild(nuevoElemento);
 }
 
 function obtenerFechaHoraActual() {
-    return new Date().toLocaleString(); 
+    return new Date().toLocaleString();
 }
 
 function limpiarFormulario() {
-    document.getElementById("message-form").reset(); 
+    document.getElementById("message-form").reset();
 }
 
+// Guardar mensaje en localStorage
+function guardarMensaje(mensaje) {
+    const mensajes = JSON.parse(localStorage.getItem("mensajes")) || [];
+    mensajes.push(mensaje);
+    localStorage.setItem("mensajes", JSON.stringify(mensajes));
+}
+
+// Cargar mensajes existentes en el log
+function cargarMensajes() {
+    const mensajes = JSON.parse(localStorage.getItem("mensajes")) || [];
+    mensajes.forEach((mensaje) => mostrarMensajeEnLog(mensaje));
+}
 
 document.addEventListener("DOMContentLoaded", inicializarSistema);
