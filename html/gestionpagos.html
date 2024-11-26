@@ -1,67 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facturación y Gestión de Pagos</title> 
+  <title>Facturación y Gestión de Pagos</title>
   <link rel="stylesheet" href="../css/gestionpagos.css">
-  <link rel="icon" href="../recursos/minilogo-cecar.png">
+  <link rel="stylesheet" href="../css/menu.css">
 </head>
 <body>
-  <div class="form-container">
-    <h2>Facturación y Gestión de Pagos</h2>
-    <form>
-    
+  <div class="barralateral">
 
-      <div class="form-group">
-        <label for="idFactura">ID de Factura</label>
-        <input type="text" id="idFactura" name="idFactura" placeholder="Autogenerado" disabled> <br> <br>
-      
+    <ul>
+        <li><a href="../html/seccionpaciente.html">Inicio del perfil</a></li>
+        
+    </ul>
+</div>
 
+  <h1>Generar Factura</h1>
+  <form id="facturaForm">
+    <label for="monto">Monto:</label>
+    <input type="number" id="monto" required><br><br>
 
-   
-        <label for="montoPagar">Monto para Pagar</label>
-        <input type="number" id="montoPagar" name="montoPagar" placeholder="Ej. 1500.00" required> <br> <br>
-      
+    <label for="metodoPago">Método de Pago:</label>
+    <select id="metodoPago" required>
+      <option value="efectivo">Efectivo</option>
+      <option value="tarjeta">Tarjeta</option>
+      <option value="transferencia">Transferencia</option>
+    </select><br><br>
 
-      
-        <label for="fechaEmision">Fecha de Emisión</label>
-        <input type="date" id="fechaEmision" name="fechaEmision" disabled> <br> <br>
-     
+    <label for="estadoPago">Estado de Pago:</label>
+    <select id="estadoPago" required>
+      <option value="pendiente">Pendiente</option>
+      <option value="pagado">Pagado</option>
+      <option value="anulado">Anulado</option>
+    </select><br><br>
 
-      
-        <label for="metodoPago">Método de Pago</label>
-        <select id="metodoPago" name="metodoPago" required>
-          <option value="efectivo">Efectivo</option>
-          <option value="tarjeta">Tarjeta</option>
-          <option value="transferencia">Transferencia</option>
-        </select> <br> <br>
-     
-     
-        <label for="estadoPago">Estado de Pago</label>
-        <select id="estadoPago" name="estadoPago" required>
-          <option value="pendiente">Pendiente</option>
-          <option value="pagado">Pagado</option>
-          <option value="anulado">Anulado</option>
-        </select> <br> <br>
-      
-        <label for="conceptoServicio">Concepto del Servicio</label>
-        <textarea id="conceptoServicio" name="conceptoServicio" rows="4" placeholder="Ej. Consulta médica, análisis de laboratorio..." required></textarea> <br> <br>
-      
+    <label for="concepto">Concepto del Servicio:</label>
+    <input type="text" id="concepto" required><br><br>
 
-     
-      
-        <label for="descuento">Descuento <span class="optional">(Opcional)</span></label>
-        <input type="number" id="descuento" name="descuento" placeholder="Porcentaje de descuento, ej. 10"> <br> <br>
-     
+    <label for="descuento">Descuento (%):</label>
+    <input type="number" id="descuento" min="0" max="100"><br><br>
 
+    <button type="button" onclick="generarFactura()">Generar Factura</button>
+  </form>
 
-        <label for="fechaVencimiento">Fecha de Vencimiento</label>
-        <input type="date" id="fechaVencimiento" name="fechaVencimiento" placeholder="30 días después de emisión">
-      </div>
+  <h2>Facturas Generadas</h2>
+  <table id="facturaSalida">
+    <thead>
+      <tr>
+        <th>ID Factura</th>
+        <th>Monto</th>
+        <th>Método de Pago</th>
+        <th>Estado de Pago</th>
+        <th>Concepto</th>
+        <th>Descuento</th>
+        <th>Fecha de Emisión</th>
+        <th>Fecha de Vencimiento</th>
+        <th>Monto Final</th>
+      </tr>
+    </thead>
+    <tbody id="facturaBody">
+    </tbody>
+  </table>
 
-      <button type="submit" class="submit-btn">Guardar Factura</button>
-    </form>
-  </div>
+  <script src="../jv/gestionpago.js"></script>
 </body>
 </html>
