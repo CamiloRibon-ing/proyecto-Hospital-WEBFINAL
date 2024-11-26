@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('/recursos/hospital.png'); /* Reemplacé la imagen para una mejor resolución */
+    background-image: url('../recursos/hospital.png'); 
     background-size: cover;
     background-position:relative;
 }
@@ -81,7 +81,7 @@ text-align: left;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px); /* Efecto vidrioso mejorado */
-    -webkit-backdrop-filter: blur(15px); /* Compatibilidad para Safari */
+    -webkit-backdrop-filter: blur(15px); 
     margin-left: 120px;
 }
 
