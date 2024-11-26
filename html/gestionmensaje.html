@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación Paciente-Médico</title>
+    <link rel="stylesheet" href="../css/gestionmensaje.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Comunicación entre Pacientes y Personal Médico</h1>
+        <form id="message-form">
+            <label for="sender">Remitente:</label>
+            <input type="text" id="sender" name="sender" placeholder="Nombre del remitente" required>
+
+            <label for="receiver">Destinatario:</label>
+            <input type="text" id="receiver" name="receiver" placeholder="Nombre del destinatario" required>
+
+            <label for="message">motivo de la consulta:</label>
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <div id="message-log">
+            <h2>Mensajes Enviados</h2>
+            <ul id="messages-list"></ul>
+        </div>
+    </div>
+
+    <script src="../jv/gestionmensaje.js"></script>
+</body>
+</html>
