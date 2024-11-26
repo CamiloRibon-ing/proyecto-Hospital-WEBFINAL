@@ -4,6 +4,7 @@ if (!localStorage.getItem("usuarios")) {
     const usuarios = [
         { usuario: "medico1", contrasena: "123", rol: "medico" }, // Cambié "contraseña" por "contrasena"
         { usuario: "paciente1", contrasena: "1234", rol: "paciente" },
+        { usuario:"docjulio", contrasena: "333", rol: "medico"},
     ];
 
     // Guardar usuarios en el localStorage

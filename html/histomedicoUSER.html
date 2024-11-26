@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/histomedicoUSER.css">
-    <title>Document</title>
+   <link rel="icon" href="../recursos/minilogo-cecar.png">
+    <title>Historial medico seccion Medico</title>
+   
 </head>
+
 <body>
-    <form action="histouser">
+   <h1>Historiales medicos</h1>
+   <h2>Seccion Usuarios</h2>
+    <form id="histouser">
 
         <label for="histomedico">Identificacion del historial medico</label>
         <input type="text" id="histomedico" name="histomedico" placeholder="ingrese el ID de su historial medico">
@@ -23,10 +28,11 @@
 
         <label for="notas">Aqui visualizara notas adicionales sobre su tratamiento</label>
         <textarea name="notas" id="notas">...</textarea>
+        <button type="submit">Enviar</button>
 
     </form>
 
-    <button type="submit">Enviar</button>
+    
     
 </body>
 </html>

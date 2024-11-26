@@ -6,13 +6,23 @@ justify-content: center;
 align-items: center;
 height: 100vh;
 background: linear-gradient(90deg, #a8edea, #89d4cf, #84b3f5); 
+flex-direction: column;
+align-items: center;
 
+}
+h1,h2{
+
+
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 form{
 
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+
 gap: 20px;
 background-color: #ffffff;
 padding: 20px;
@@ -24,14 +34,14 @@ max-width: 800px
 }
 
 form label{
-grid-column: span 2;
+
 font-weight: bold;
 margin-bottom: 5px;
 display: block;
 }
 
 form input, form textarea{
-    grid-column: span 2;
+   
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -50,7 +60,7 @@ textarea{
 
 button{
 
-    grid-column:span 2;
+  
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -70,8 +80,3 @@ button:hover{
     background-color: #0056b3;
 }
 
-@media(max-width: 600px){
-
-
-}
-    
